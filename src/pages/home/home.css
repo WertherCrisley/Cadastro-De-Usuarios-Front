@@ -1,0 +1,145 @@
+#body {
+    min-height: 100vh;
+    height: auto;
+}
+
+
+.input-custom {
+    width: 75%;
+}
+
+@media (max-width: 768px) {
+    .input-custom {
+        width: 100%;
+    }
+}
+
+.containerLista {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+    .containerLista {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.containerLista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card-user {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.avatar {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background: #e6f1fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 15px;
+    color: #0c447c;
+}
+
+.user-info {
+    flex: 1;
+    min-width: 0;
+    /* impede overflow do texto */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a202c;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* corta nome longo com "..." */
+}
+
+.user-detail {
+    font-size: 13px;
+    color: #718096;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge-age {
+    background: #e6f1fb;
+    color: #185fa5;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.btn-del {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #a32d2d;
+    background: transparent;
+    border: 1px solid #f09595;
+    border-radius: 8px;
+    padding: 6px 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.btn-del:hover {
+    background: #fcebeb;
+}
+
+
+@media (max-width: 480px) {
+    .card-user {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .badge-age {
+        display: none;
+    }
+
+    .btn-del span {
+        display: none;
+        /* esconde o texto "Deletar", fica só o ícone */
+    }
+
+    .btn-del {
+        padding: 6px 10px;
+        border-radius: 50%;
+    }
+}
